@@ -13,6 +13,17 @@ make
 
 Use `--gpu-x` and `--gpu-o` to select devices. On a one-GPU lab, use `--allow-same-gpu` for a functional demonstration; the design still keeps two independent competitor threads and two device contexts when two GPUs are available.
 
+### Windows visualization demo
+
+From PowerShell, run the included board visualization without Make:
+
+```powershell
+cd C:\path\to\assignment1-multi-gpu-tictactoe
+.\demo.ps1
+```
+
+This is a presentation fallback for the board visualization. The CUDA executable remains the graded implementation and should be built in the course CUDA lab.
+
 ## Design
 
 The X worker uses a center/corner preference and the O worker uses a corner/edge preference. A kernel launches one thread per legal move, evaluates the resulting board, and returns a score. This demonstrates GPU competition without requiring a sophisticated AI: both players independently submit candidate moves, while the host provides the synchronization boundary between turns.
