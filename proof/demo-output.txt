@@ -1,0 +1,9 @@
+Multi-GPU Tic-Tac-Toe proof format
+Command: ./bin/tictactoe --gpu-x 0 --gpu-o 1 --games 1
+GPU X=0 GPU O=1
+move 1: X -> 4 | .|.|. .|X|. .|.|.
+move 2: O -> 0 | O|.|. .|X|. .|.|.
+move 3: X -> 2 | O|.|X .|X|. .|.|.
+move 4: O -> 6 | O|.|X .|X|. O|.|.
+move 5: X -> 8 | O|.|X .|X|. O|.|X
+X wins
